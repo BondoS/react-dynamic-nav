@@ -1,4 +1,6 @@
-const checkStatus = (response: Response) => {
+import fetch from 'unfetch';
+
+const checkStatus = (response: any) => {
   if (response.ok) {
     return response;
   }
