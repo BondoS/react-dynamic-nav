@@ -15,7 +15,7 @@ interface NavListState {
   navList: NavItem[];
 }
 
-const initialState: NavListState = {
+export const initialState: NavListState = {
   loading: false,
   error: null,
   navList: [],
