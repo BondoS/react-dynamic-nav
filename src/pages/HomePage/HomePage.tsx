@@ -2,17 +2,15 @@ import React from 'react';
 import { Aside } from '../../components/Aside';
 import { Header } from '../../components/Header';
 import { HeaderNav } from '../../components/HeaderNav';
-import { LeftNav } from '../../components/LeftNav';
+import { LeftNav } from '../../containers/LeftNav';
 import { Main } from '../../components/Main';
 import { MidContent } from '../../components/MidContent';
 
-type Props = {};
-
-export const HomePage = ({}: Props) => {
+export const HomePage = () => {
   return (
     <>
       <Aside>
-        <LeftNav>left nav</LeftNav>
+        <LeftNav />
       </Aside>
       <MidContent>
         <Header>
