@@ -4,7 +4,7 @@ interface Props {
   depth: number;
 }
 export const NavItemStyled = styled.li<Props>`
-  margin-inline-start: ${(props) => props.depth * 3}%;
+  margin-inline-start: ${(props) => props.depth}%;
   font-weight: 600;
   & .itemBody {
     overflow: hidden;
@@ -24,6 +24,11 @@ export const NavItemStyled = styled.li<Props>`
     }
   }
   & .itemHead {
+    padding-right: 0;
+    padding-left: 0;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 1rem;
     display: flex;
     justify-content: space-between;
     width: 100%;

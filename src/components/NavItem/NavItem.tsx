@@ -19,7 +19,11 @@ export const NavItem = ({ title, children, depth, parent, id }: Props) => {
   const itemState = open ? 'open' : 'closed';
   return (
     <NavItemStyled depth={depth} className={`${itemState}`} id={id}>
-      <div className='itemHead' onClick={() => setOpen(!open)}>
+      <button
+        className='itemHead'
+        onClick={() => setOpen(!open)}
+        aria-expanded={open ? 'true' : 'false'}
+      >
         <div className='logoAndTitle'>
           {depth === 1 ? (
             <img src={navIcon} className='itemLogo' alt='nav logo' />
@@ -31,7 +35,7 @@ export const NavItem = ({ title, children, depth, parent, id }: Props) => {
         {parent ? (
           <NavArrowStyled open={open} src={arrowIcon} alt='nav toggle' />
         ) : null}
-      </div>
+      </button>
       <div className='itemBody'>{children}</div>
     </NavItemStyled>
   );

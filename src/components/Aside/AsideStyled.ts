@@ -1,12 +1,31 @@
 import styled from 'styled-components';
 
-export const AsideStyled = styled.aside`
+interface Props {
+  open: boolean;
+}
+export const AsideStyled = styled.aside<Props>`
   float: left;
-  width: 80%;
+  overflow: hidden;
+  width: ${(props) => (props.open ? '80%' : '20px')};
   min-height: 100vh;
-  padding-inline: 15px 20px;
+  padding-inline: 5px 20px;
+  padding-block-start: 15px;
   border-inline-end: 2px solid #bbbbbf;
   @media (min-width: 480px) {
-    width: 25%;
+    width: ${(props) => (props.open ? '25%' : '20px')};
+  }
+  .toggleDrawerBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      img {
+        filter: invert(16%) sepia(37%) saturate(6848%) hue-rotate(288deg)
+          brightness(79%) contrast(95%);
+      }
+    }
+  }
+  .toggleDrawerImg {
+    height: 23px;
   }
 `;

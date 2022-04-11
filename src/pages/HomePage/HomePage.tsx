@@ -1,5 +1,4 @@
-import React from 'react';
-import { Aside } from '../../components/Aside';
+import { Aside } from '../../containers/Aside/Aside';
 import { Header } from '../../components/Header';
 import { HeaderNav } from '../../components/HeaderNav';
 import { LeftNav } from '../../containers/LeftNav';
