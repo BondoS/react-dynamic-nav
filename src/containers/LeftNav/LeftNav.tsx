@@ -1,8 +1,14 @@
 import { LeftNav as LeftNavBase } from '../../components/LeftNav';
 import { useAppSelector } from '../../store/hooks';
-import { memoizedNavListSelector } from '../../store/selectors';
+import {
+  memoizedNavListErrorSelector,
+  memoizedNavListLoadingSelector,
+  memoizedNavListSelector,
+} from '../../store/selectors';
 
 export const LeftNav = () => {
   const navList = useAppSelector(memoizedNavListSelector);
-  return <LeftNavBase navList={navList}>LeftNav</LeftNavBase>;
+  const loading = useAppSelector(memoizedNavListLoadingSelector);
+  const error = useAppSelector(memoizedNavListErrorSelector);
+  return <LeftNavBase navList={navList} loading={loading} error={error} />;
 };

@@ -1,39 +1,41 @@
-import React, { ReactNode } from 'react';
 import { NavItem } from '../../store/slices';
 import { MemoizedNavItem } from '../NavItem';
 import { LeftNavStyled } from './LeftNavStyled';
 
 type Props = {
-  children?: ReactNode;
   navList: NavItem[];
+  loading: boolean;
+  error: string | null;
 };
 
-export const LeftNav = ({ children, navList }: Props) => {
+export const LeftNav = ({ navList, loading, error }: Props) => {
   const recursiveRender = (navItem: NavItem, depth = 1) => {
-    if (Array.isArray(navItem.children) && navItem.children.length > 0) {
-      const childrenDepth = depth + 1;
-      return (
-        <MemoizedNavItem key={navItem.id} title={navItem.title} depth={depth}>
-          <div>
+    const childDepth = depth + 1;
+    return (
+      <MemoizedNavItem
+        id={navItem.id}
+        key={navItem.id}
+        title={navItem.title}
+        depth={depth}
+        parent={navItem.children.length > 0}
+      >
+        {navItem.children.length > 0 ? (
+          <ul>
             {navItem.children.map((navItem) =>
-              recursiveRender(navItem, childrenDepth)
+              recursiveRender(navItem, childDepth)
             )}
-          </div>
-        </MemoizedNavItem>
-      );
-    } else {
-      return (
-        <MemoizedNavItem
-          key={navItem.id}
-          title={navItem.title}
-          depth={depth}
-        ></MemoizedNavItem>
-      );
-    }
+          </ul>
+        ) : null}
+      </MemoizedNavItem>
+    );
   };
+  if (error) return <div>{error}</div>;
+  // For better UX, create skeleton dom or shadow effect instead of "Loading..." later
+  if (loading) return <div>Loading...</div>;
+  if (navList.length <= 0) return <div>The Nav list is empty</div>;
   return (
     <LeftNavStyled>
-      {navList.map((item) => recursiveRender(item))}
+      <ul>{navList.map((item) => recursiveRender(item))}</ul>
     </LeftNavStyled>
   );
 };
