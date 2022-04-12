@@ -15,7 +15,7 @@ export const AsideStyled = styled.aside<Props>`
   position: absolute;
   @media (min-width: 480px) {
     position: initial;
-    width: ${(props) => (props.open ? '35%' : '20px')};
+    width: ${(props) => (props.open ? '25%' : '20px')};
   }
   .toggleDrawerBtn {
     background: none;
