@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { MainStyled } from './MainStyled';
 
 type Props = {
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 export function Main({ children }: Props) {
