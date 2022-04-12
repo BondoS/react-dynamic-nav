@@ -24,6 +24,7 @@ export const NavItemStyled = styled.li<Props>`
     }
   }
   & .itemHead {
+    text-align: inherit;
     padding-right: 0;
     padding-left: 0;
     font-weight: 600;
