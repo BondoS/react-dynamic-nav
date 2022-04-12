@@ -4,6 +4,7 @@ interface Props {
   open: boolean;
 }
 export const AsideStyled = styled.aside<Props>`
+  background: white;
   float: left;
   overflow: hidden;
   width: ${(props) => (props.open ? '80%' : '20px')};
@@ -11,8 +12,10 @@ export const AsideStyled = styled.aside<Props>`
   padding-inline: 5px 20px;
   padding-block-start: 15px;
   border-inline-end: 2px solid #bbbbbf;
+  position: absolute;
   @media (min-width: 480px) {
-    width: ${(props) => (props.open ? '25%' : '20px')};
+    position: initial;
+    width: ${(props) => (props.open ? '35%' : '20px')};
   }
   .toggleDrawerBtn {
     background: none;
