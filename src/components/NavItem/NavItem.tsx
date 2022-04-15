@@ -23,6 +23,7 @@ export const NavItem = ({ title, children, depth, parent, id }: Props) => {
         className='itemHead'
         onClick={() => setOpen(!open)}
         aria-expanded={open ? 'true' : 'false'}
+        data-testid='itemHead'
       >
         <div className='logoAndTitle'>
           {depth === 1 ? (

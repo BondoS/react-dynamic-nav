@@ -5,11 +5,11 @@ export interface NavItem {
   url: string | null;
   id: string;
   icon: string;
-  hasAlert: null;
+  hasAlert: boolean;
   children: NavItem[];
 }
 
-interface NavListState {
+export interface NavListState {
   loading: boolean;
   error: string | null;
   navList: NavItem[];

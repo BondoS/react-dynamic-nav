@@ -6,7 +6,7 @@ import {
   PutEffect,
   takeLatest,
 } from 'redux-saga/effects';
-import getNavListService from '../../services/getNavListService';
+import navListService from '../../services/getNavListService';
 import {
   importSuccess,
   importFail,
@@ -20,6 +20,7 @@ export function* fetchList(): Generator<
   void,
   unknown & NavItem[]
 > {
+  const { getNavListService } = navListService;
   try {
     yield put(startImport());
     const response = yield call(getNavListService);
