@@ -19,8 +19,9 @@ jest.mock('../../services/getNavListService', () => {
   };
 });
 
-test('Render multiple items', async () => {
-  render(<HomePage />);
+test('Calls endpoint and render nav item', async () => {
+  const view = render(<HomePage />);
+  expect(view).toMatchSnapshot();
   await waitFor(() => {
     expect(screen.getAllByTestId('itemHead').length).toBeGreaterThanOrEqual(1);
   });

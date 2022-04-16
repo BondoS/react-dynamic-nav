@@ -1,4 +1,6 @@
-export const navListFull = [
+import { NavItem } from '../store/slices';
+
+export const navListFull: NavItem[] = [
   {
     title: 'Reporting',
     url: null,

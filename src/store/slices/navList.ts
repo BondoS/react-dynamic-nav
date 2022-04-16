@@ -4,7 +4,7 @@ export interface NavItem {
   title: string;
   url: string | null;
   id: string;
-  icon: string;
+  icon: string | null;
   hasAlert: boolean;
   children: NavItem[];
 }

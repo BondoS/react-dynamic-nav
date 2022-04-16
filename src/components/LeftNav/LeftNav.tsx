@@ -5,10 +5,10 @@ import { LeftNavStyled } from './LeftNavStyled';
 type Props = {
   navList: NavItem[];
   loading: boolean;
-  error: string | null;
+  error?: string | null;
 };
 
-export const LeftNav = ({ navList, loading, error }: Props) => {
+export const LeftNav = ({ navList, loading, error = null }: Props) => {
   const recursiveRender = (navItem: NavItem, depth = 1) => {
     const childDepth = depth + 1;
     return (
@@ -29,9 +29,9 @@ export const LeftNav = ({ navList, loading, error }: Props) => {
       </MemoizedNavItem>
     );
   };
-  if (error) return <div>{error}</div>;
+  if (error) return <div data-testid='navListError'>{error}</div>;
   // For better UX, create skeleton dom or shadow effect instead of "Loading..." later
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div data-testid='navListLoading'>Loading...</div>;
   if (navList.length <= 0) return <div>The Nav list is empty</div>;
   return (
     <LeftNavStyled>
