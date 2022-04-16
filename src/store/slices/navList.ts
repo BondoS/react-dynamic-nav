@@ -4,12 +4,12 @@ export interface NavItem {
   title: string;
   url: string | null;
   id: string;
-  icon: string;
-  hasAlert: null;
+  icon: string | null;
+  hasAlert: boolean;
   children: NavItem[];
 }
 
-interface NavListState {
+export interface NavListState {
   loading: boolean;
   error: string | null;
   navList: NavItem[];

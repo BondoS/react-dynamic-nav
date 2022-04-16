@@ -13,4 +13,7 @@ async function apiCall<T>(url: string): Promise<T> {
     .then((result) => result.json());
 }
 
-export default apiCall;
+const toExport = {
+  apiCall,
+};
+export default toExport;
