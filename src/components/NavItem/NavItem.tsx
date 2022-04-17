@@ -18,11 +18,16 @@ export const NavItem = ({ title, children, depth, parent, id }: Props) => {
 
   const itemState = open ? 'open' : 'closed';
   return (
-    <NavItemStyled depth={depth} className={`${itemState}`} id={id}>
+    <NavItemStyled
+      depth={depth}
+      className={`${itemState}`}
+      id={id}
+      role='treeitem'
+      aria-expanded={open ? 'true' : 'false'}
+    >
       <button
         className='itemHead'
         onClick={() => setOpen(!open)}
-        aria-expanded={open ? 'true' : 'false'}
         data-testid='itemHead'
       >
         <div className='logoAndTitle'>

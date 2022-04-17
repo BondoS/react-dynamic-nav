@@ -12,7 +12,7 @@ const sagaMiddleware = createSagaMiddleware();
 const store = configureStore({
   reducer: globalReducer,
   middleware: (getDefaultMiddleware) => [
-    ...getDefaultMiddleware({ thunk: false }).concat(logger),
+    ...getDefaultMiddleware({ thunk: false }),
     sagaMiddleware,
   ],
 });

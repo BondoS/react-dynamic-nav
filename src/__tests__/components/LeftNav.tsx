@@ -1,4 +1,5 @@
 import { screen } from '@testing-library/react';
+import { axe } from 'jest-axe';
 import { render } from '../../../test-utils';
 import { LeftNav } from '../../components/LeftNav';
 import { navListFull } from '../../mockData/navigation';
@@ -6,6 +7,14 @@ import { navListFull } from '../../mockData/navigation';
 test('Nav list rendered with multiple items', () => {
   render(<LeftNav navList={navListFull} loading={false} />);
   expect(screen.getAllByTestId('itemHead').length).toBeGreaterThan(1);
+});
+
+test('Accessibility', async () => {
+  const { container } = render(
+    <LeftNav navList={navListFull} loading={false} />
+  );
+  const results = await axe(container);
+  expect(results).toHaveNoViolations();
 });
 
 test('Nav list rendered in loading state', () => {
