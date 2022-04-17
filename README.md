@@ -24,7 +24,7 @@
 
 ### Store
 
-- [Redux toolkit](https://redux-toolkit.js.org/) with [Saga](https://redux-saga.js.org/)
+- [Redux toolkit](https://redux-toolkit.js.org/) with [Saga](https://redux-saga.js.org/) are used to create the store <br />
   ![image](https://user-images.githubusercontent.com/2457873/163710006-0d49c099-0ead-4667-ad16-0fcdf55ab1b8.png)
 
 ### Future improvements
