@@ -13,7 +13,7 @@ export const AsideStyled = styled.aside<Props>`
   padding-block-start: 15px;
   border-inline-end: 2px solid #bbbbbf;
   position: absolute;
-  @media (min-width: 480px) {
+  @media (min-width: 576px) {
     position: initial;
     width: ${(props) => (props.open ? '25%' : '20px')};
   }
