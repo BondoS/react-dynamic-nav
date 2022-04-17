@@ -20,7 +20,7 @@ export const LeftNav = ({ navList, loading, error = null }: Props) => {
         parent={navItem.children.length > 0}
       >
         {navItem.children.length > 0 ? (
-          <ul>
+          <ul role='group'>
             {navItem.children.map((navItem) =>
               recursiveRender(navItem, childDepth)
             )}
@@ -35,7 +35,9 @@ export const LeftNav = ({ navList, loading, error = null }: Props) => {
   if (navList.length <= 0) return <div>The Nav list is empty</div>;
   return (
     <LeftNavStyled>
-      <ul>{navList.map((item) => recursiveRender(item))}</ul>
+      <ul role='tree' aria-labelledby='Nav-list-tree'>
+        {navList.map((item, index) => recursiveRender(item))}
+      </ul>
     </LeftNavStyled>
   );
 };

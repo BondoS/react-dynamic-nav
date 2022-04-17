@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <aside
-        class="sc-bczRLJ fjwDpE"
+        class="sc-bczRLJ jgNdOc"
         open=""
       >
         <button
@@ -21,15 +21,19 @@ Object {
           />
         </button>
         <nav
-          class="sc-gKXOVf iHJRWE"
+          class="sc-iBkjds eGPzDK"
         >
-          <ul>
+          <ul
+            aria-labelledby="Nav-list-tree"
+            role="tree"
+          >
             <li
-              class="sc-eCYdqJ emajkZ closed"
+              aria-expanded="false"
+              class="sc-jSMfEi fxcfZj closed"
               id="menu-reporting"
+              role="treeitem"
             >
               <button
-                aria-expanded="false"
                 class="itemHead"
                 data-testid="itemHead"
               >
@@ -56,29 +60,49 @@ Object {
         </nav>
       </aside>
       <div
-        class="sc-ftvSup"
+        class="sc-papXJ"
       >
         <header
-          class="sc-hKMtZM eKgZKc"
+          class="sc-eCYdqJ gnxwki"
         >
           <img
             alt="logo"
-            class="sc-gsnTZi exkqoG"
+            class="sc-gsnTZi btNXno"
             src="wayfair-partner-home-logo.svg"
           />
           <nav
             class="sc-dkzDqf"
           />
+          <div
+            class="sc-hKMtZM iUMALW"
+          >
+            <svg
+              class="bi bi-person-circle"
+              fill="currentColor"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"
+              />
+              <path
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
         </header>
         <main
-          class="sc-iBkjds"
+          class="sc-ftvSup"
         />
       </div>
     </div>
   </body>,
   "container": <div>
     <aside
-      class="sc-bczRLJ fjwDpE"
+      class="sc-bczRLJ jgNdOc"
       open=""
     >
       <button
@@ -93,15 +117,19 @@ Object {
         />
       </button>
       <nav
-        class="sc-gKXOVf iHJRWE"
+        class="sc-iBkjds eGPzDK"
       >
-        <ul>
+        <ul
+          aria-labelledby="Nav-list-tree"
+          role="tree"
+        >
           <li
-            class="sc-eCYdqJ emajkZ closed"
+            aria-expanded="false"
+            class="sc-jSMfEi fxcfZj closed"
             id="menu-reporting"
+            role="treeitem"
           >
             <button
-              aria-expanded="false"
               class="itemHead"
               data-testid="itemHead"
             >
@@ -128,22 +156,42 @@ Object {
       </nav>
     </aside>
     <div
-      class="sc-ftvSup"
+      class="sc-papXJ"
     >
       <header
-        class="sc-hKMtZM eKgZKc"
+        class="sc-eCYdqJ gnxwki"
       >
         <img
           alt="logo"
-          class="sc-gsnTZi exkqoG"
+          class="sc-gsnTZi btNXno"
           src="wayfair-partner-home-logo.svg"
         />
         <nav
           class="sc-dkzDqf"
         />
+        <div
+          class="sc-hKMtZM iUMALW"
+        >
+          <svg
+            class="bi bi-person-circle"
+            fill="currentColor"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"
+            />
+            <path
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
       </header>
       <main
-        class="sc-iBkjds"
+        class="sc-ftvSup"
       />
     </div>
   </div>,
